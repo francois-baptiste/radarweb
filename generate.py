@@ -1,4 +1,4 @@
-from radarplot.CIKM import *
+from radarplot.CIKM import CIKM
 from jinja2 import Environment, FileSystemLoader
 import os
 
@@ -46,7 +46,7 @@ for i, radar in enumerate(cikm.getAllRadars(sorted=True, reversed=True)):
     meta["label"] = radar.getLabel()
     meta["video"] = "vid/{}.mp4".format(radar.getID())
     radar_data.append(meta)
-    
+
     os.makedirs(IMG_DIR, exist_ok=True)
     radar.plotThumbnail('{}/{}'.format(IMG_DIR, radar.getID()))
     os.makedirs(VID_DIR, exist_ok=True)
