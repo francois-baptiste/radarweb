@@ -53,12 +53,12 @@
       	  <li class=""><a href="index{{last}}.html" aria-label="Last"><span aria-hidden="true">&raquo;</span></a></li>
       	</ul>
       </div>
-      
+
       <div class="row">
 	{% for r in radars %}
 	<div class="col-xs-12 col-sm-6 col-md-3">
 	  <div class="thumbnail">
-	    <a href="{{ r['video'] }}"><img src="{{ r['thumbnail'] }}" alt="{{ r['thumbnail'] }}"></a>
+	    <a href="{{ r['videohtml'] }}.html"><img src="{{ r['thumbnail'] }}" alt="{{ r['thumbnail'] }}"></a>
 	    <div class="caption">
 	      <p class="text-center"><strong> {{ r['id'] }} </strong> <br />{{ r['label'] }} inches</p>
 	    </div>
@@ -84,7 +84,6 @@
 
       <div>
 	<footer class="footer">
-          <p>Jesus @ <a href="http://jesus.engineer">http://jesus.engineer</a></p>
 	</footer>
       </div><!-- /.container -->
 
@@ -96,6 +95,6 @@
 	<script src="bootstrap/js/bootstrap.min.js"></script>
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 	<script src="bootstrap/assets/js/ie10-viewport-bug-workaround.js"></script>
-	
+
   </body>
 </html>
