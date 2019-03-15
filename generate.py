@@ -1,3 +1,5 @@
+import math
+
 from radarplot.CIKM import CIKM
 from jinja2 import Environment, FileSystemLoader
 import os
@@ -16,7 +18,7 @@ template = Environment(
     trim_blocks=False)
 cikm = CIKM('../data/train.txt', '../data/train.index')
 radar_data = []
-pagesn = int(cikm.getSize() / ITEMS_PER_PAGE) # number of pages
+pagesn = math.ceil(cikm0.getSize() / ITEMS_PER_PAGE) # number of pages
 
 def pagination (n, anchor, size):
     """Returns a list with the pagination numbers.
